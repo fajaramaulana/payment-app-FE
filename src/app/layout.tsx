@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/BaseLayout/header";
 import Footer from "./components/BaseLayout/footer";
+import { ThemeProvider } from "./components/theme-provider";
 
 // Import custom fonts
 const geistSans = localFont({
@@ -38,14 +39,21 @@ export default function RootLayout({ children }: LayoutProps) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Header Section */}
-        <Header/>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {/* Header Section */}
+          <Header />
 
-        {/* Main Content */}
-        <main>{children}</main>
+          {/* Main Content */}
+          <main>{children}</main>
 
-        {/* Footer Section */}
-        <Footer/>
+          {/* Footer Section */}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
