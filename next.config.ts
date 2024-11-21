@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  env: {
+    PORT: process.env.PORT || '3000',  // Fallback to 3000 if PORT is not defined
+  },
 };
 
 export default nextConfig;

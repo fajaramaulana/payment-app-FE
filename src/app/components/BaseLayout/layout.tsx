@@ -2,8 +2,8 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "./components/BaseLayout/header";
-import Footer from "./components/BaseLayout/footer";
+import Footer from "./footer";
+import Header from "./header";
 
 // Import custom fonts
 const geistSans = localFont({
