@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
-import "./globals.css";
+
 export const metadata: Metadata = {
   title: "Admin Dashboard",
   description: "Your Admin Dashboard",
 };
 
-export default function RootLayout({
+export default function HomeLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body>
+    <>
+      <header></header>
+      <main className="antialiased font-geist bg-background-login bg-cover bg-center">
         {children}
-      </body>
-    </html>
+      </main>
+      <footer></footer>
+    </>
   );
 }
