@@ -29,8 +29,11 @@ const config: Config = {
         'lightest': '#F1F0E8',
       },
       fontFamily: {
-        geistMono: ['var(--font-geist-mono)', 'monospace'],
-        geistSans: ['var(--font-geist-sans)', 'sans-serif'],
+        geistMono: ['GeistMonoVF', 'monospace'],
+        geist: ['GeistVF', 'sans-serif'],
+      },
+      backgroundImage: {
+        'background-login': "url('/images/bgrn-core.png')",
       },
     },
   },
